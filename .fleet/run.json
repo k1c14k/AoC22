@@ -1,0 +1,70 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "Calories",
+            "program": "/usr/bin/lua",
+            "args": ["day1/calories.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Rock Paper Scissors",
+            "program": "/usr/bin/lua",
+            "args": ["day2/rock_paper_scissors.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Rock Paper Scissors Select",
+            "program": "/usr/bin/lua",
+            "args": ["day2/rock_paper_scissors_select.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Rucksack Reorganization",
+            "program": "/usr/bin/lua",
+            "args": ["day3/rucksack_reorganization.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Identify elves",
+            "program": "/usr/bin/lua",
+            "args": ["day3/identify_elves.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Camp Cleanup",
+            "program": "/usr/bin/lua",
+            "args": ["day4/camp_cleanup.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Supply Stacks",
+            "program": "/usr/bin/lua",
+            "args": ["day5/supply_stacks.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Supply Stacks Crane 9001",
+            "program": "/usr/bin/lua",
+            "args": ["day5/supply_stacks_9001.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Turning Trouble",
+            "program": "/usr/bin/lua",
+            "args": ["day6/turning_trouble.lua"],
+        },
+        {
+            "type": "command",
+            "name": "No Space Left On Device",
+            "program": "/usr/bin/lua",
+            "args": ["day7/no_space_left_on_device.lua"],
+        },
+        {
+            "type": "command",
+            "name": "RPS Python",
+            "program": "/usr/bin/python3",
+            "args": ["day2/another.py"]
+        }
+    ]
+}
