@@ -68,6 +68,12 @@
         },
         {
             "type": "command",
+            "name": "Treetop Tree House - Scenic Score",
+            "program": "/usr/bin/lua",
+            "args": ["day8/treetop_tree_house_scenic_score.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]

@@ -8,71 +8,88 @@ for line in io.lines('day8/input.txt') do
 end
 
 function check_top(row, column)
-    for r=1, row -1 do
+    if row == 1 then
+        return 0
+    end
+
+    result = 0
+    for r=row -1, 1, -1 do
+        result = result + 1
         if trees[r][column] >= trees[row][column] then
-            -- print('Failed row ' .. r)
-            return false
+            -- print('TOP ' .. result)
+            return result
         end
     end
 
-    return true
+    -- print('TOP ' .. result)
+    return result
 end
 
 function check_bottom(row, column)
-    for r=row+1, #trees do
-        if trees[r][column] >= trees[row][column] then
-            -- print('Failed row ' .. r)
-            return false
-        end
+    if row == #trees then
+        return 0
     end
 
-    return true
+    result = 0
+    for r=row + 1, #trees do
+        result = result + 1
+        if trees[r][column] >= trees[row][column] then
+            -- print('BOTTOM ' .. result)
+            return result
+        end
+    end
+    -- print('BOTTOM ' .. result)
+    return result
 end
 
 function check_left(row, column)
-    for c=1, column -1 do
-        if trees[row][c] >= trees[row][column] then
-            -- print('Failed column ' .. c)
-            return false
-        end
+    if column == 1 then
+        return 0
     end
 
-    return true
+    result = 0
+    for c=column - 1, 1, -1 do
+        result = result + 1
+        if trees[row][c] >= trees[row][column] then
+            -- print('LEFT ' .. result)
+            return result
+        end
+    end
+    -- print('LEFT ' .. result)
+    return result
 end
 
 function check_right(row, column)
+    if column == #trees[row] then
+        return 0
+    end
+
+    result = 0
     for c=column + 1, #trees[row] do
+        result = result + 1
         if trees[row][c] >= trees[row][column] then
-            -- print('Failed column ' .. c)
-            return false
+            -- print('RIGHT ' .. result)
+            return result
         end
     end
-
-    return true
+    -- print('RIGHT ' .. result)
+    return result
 end
 
-function is_exterior(row, column)
-    if row == #trees or row == 1 or column == 1 or column == #trees[row] then
-        return true
-    end
-    return false
+function tree_score(row, column)
+    return check_top(row, column) * check_left(row, column) * check_right(row, column) * check_bottom(row, column)
 end
 
-function is_visible(row, column)
-    -- print('Checking ' .. row .. ' ' .. column)
-    if is_exterior(row, column) or check_top(row,column) or check_left(row, column) or check_right(row, column) or check_bottom(row, column) then
-        return 1
-    end
+max_tree_score = 0
 
-    return 0
-end
-
-trees_visible = 0
-
-for row=1, #trees do
-    for column=1, #trees[row] do
-        trees_visible = trees_visible + is_visible(row, column)
+for row=2, #trees - 1 do
+    for column=2, #trees[row] - 1 do
+        score = tree_score(row, column)
+        -- print(row .. ',' .. column .. ' ' .. score)
+        if max_tree_score < score then
+            max_tree_score = score
+        end
     end
 end
 
-print('Solution 1: ' .. trees_visible)
+print('Solution 2: ' .. max_tree_score)
