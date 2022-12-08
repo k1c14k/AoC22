@@ -62,6 +62,12 @@
         },
         {
             "type": "command",
+            "name": "Treetop Tree House",
+            "program": "/usr/bin/lua",
+            "args": ["day8/treetop_tree_house.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
