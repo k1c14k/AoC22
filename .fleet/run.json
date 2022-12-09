@@ -74,6 +74,18 @@
         },
         {
             "type": "command",
+            "name": "Rope Bridge",
+            "program": "/usr/bin/lua",
+            "args": ["day9/rope_bridge.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Rope Bridge Many Knots",
+            "program": "/usr/bin/lua",
+            "args": ["day9/rope_bridge_many_knots.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
