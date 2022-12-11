@@ -92,6 +92,12 @@
         },
         {
             "type": "command",
+            "name": "Monkey in the Middle",
+            "program": "/usr/bin/lua",
+            "args": ["day11/monkey_in_the_middle.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
