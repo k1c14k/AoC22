@@ -98,6 +98,12 @@
         },
         {
             "type": "command",
+            "name": "Hill Climbing Algorithm",
+            "program": "/usr/bin/lua",
+            "args": ["day12/hill_climbing_algorithm.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
