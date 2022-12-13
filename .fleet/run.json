@@ -104,6 +104,12 @@
         },
         {
             "type": "command",
+            "name": "Distress Signal",
+            "program": "/usr/bin/lua",
+            "args": ["day13/distress_signal.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
