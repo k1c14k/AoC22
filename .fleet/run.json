@@ -110,6 +110,12 @@
         },
         {
             "type": "command",
+            "name": "Regolith Reservoir",
+            "program": "/usr/bin/lua",
+            "args": ["day14/regolith_reservoir.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
