@@ -116,6 +116,12 @@
         },
         {
             "type": "command",
+            "name": "Beacon Exclusion Zone",
+            "program": "/usr/bin/lua",
+            "args": ["day15/beacon_exclusion_zone.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
