@@ -98,14 +98,14 @@ end
 
 
 function find_beacon(sensors, max_coordinate)
-    progress = 0
-    prev_reported = -1
+    -- progress = 0
+    -- prev_reported = -1
     for y=0, max_coordinate do
-        progress = (100 * y // max_coordinate)
-        if progress > prev_reported then
-            print('Testing y = ' .. y .. ' / ' .. max_coordinate .. ' (' .. progress .. '%)')
-            prev_reported = progress
-        end
+        -- progress = (100 * y // max_coordinate)
+        -- if progress > prev_reported then
+        -- print('Testing y = ' .. y .. ' / ' .. max_coordinate .. ' (' .. progress .. '%)')
+        --     prev_reported = progress
+        -- end
         ranges = optimize(find_x_ranges(sensors, y))
         ranges = filter_ranges(ranges, 0, max_coordinate)
         if #ranges == 2 then
@@ -113,7 +113,7 @@ function find_beacon(sensors, max_coordinate)
             if x1 > x3 then
                 x1, x2, x3, x4 = x3, x4, x1, x2
             end
-            print(y, x1, x2, x3, x4)
+            -- print(y, x1, x2, x3, x4)
             return (x2 + 1) * 4000000 + y
         end
     end
