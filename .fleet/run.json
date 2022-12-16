@@ -122,6 +122,12 @@
         },
         {
             "type": "command",
+            "name": "Proboscidea Volcanium",
+            "program": "/usr/bin/lua",
+            "args": ["day16/proboscidea_volcanium.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
