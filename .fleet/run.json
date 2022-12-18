@@ -128,6 +128,18 @@
         },
         {
             "type": "command",
+            "name": "Pyroclastic Flow",
+            "program": "/usr/bin/lua",
+            "args": ["day17/pyroclastic_flow.lua"],
+        },
+        {
+            "type": "command",
+            "name": "Boiling Boulders",
+            "program": "/usr/bin/lua",
+            "args": ["day18/boiling_boulders.lua"],
+        },
+        {
+            "type": "command",
             "name": "RPS Python",
             "program": "/usr/bin/python3",
             "args": ["day2/another.py"]
